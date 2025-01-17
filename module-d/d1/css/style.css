@@ -1,0 +1,118 @@
+/*CSS*/
+body,
+h1,
+header,
+main,
+footer,
+div {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  overflow: hidden;
+}
+
+header {
+  background-color: #f5f5f5;
+  padding: 20px;
+  text-align: center;
+  border-bottom: 1px solid #ddd;
+}
+
+main {
+  padding-top: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: calc(100vh - 60px);
+  margin: 0 auto;
+}
+
+footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 1rem;
+  background-color: #f5f5f5;
+  border-top: 1px solid #ddd;
+  text-align: center;
+}
+
+#copyrightYear {
+  font-weight: bold;
+}
+/*DO NOT MODIFY ANY CODE ABOVE*/
+/*PUT YOUR CSS CODE FROM THIS POINT ONWARD*/
+
+/* 
+Red: #de2910
+ */
+
+.wrapper {
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.flag {
+  background-color: #de2910;
+  width: 500px;
+  height: 400px;
+  position: relative;
+}
+
+.star {
+  height: 100px;
+  padding-top: 50px;
+  padding-left: 50px;
+}
+
+.stars {
+  position:absolute;
+  left: 40%;
+  top: 8%;
+  /* height: 45px; */
+  width: 5vw;
+  display: grid;
+  grid-template-areas: 
+  'star1 .' 
+  'star2 star2' 
+  'star3 star3' 
+  'star4 .';
+  grid-template-rows: repeat(4, 45px);
+  /* grid-template-columns: repeat(2, 1fr); */
+}
+
+.star-1, .star-4 {
+  rotate: -33deg;
+}
+
+.star-2, .star-3 {
+  rotate: -55deg;
+  justify-self: center;
+  /* grid-column-start: 1;
+  grid-column-end: 2; */
+}
+
+.star-1 {
+  grid-area: star1;
+}
+
+.star-2{
+  grid-area: star2;
+}
+
+.star-3{
+  grid-area: star3;
+}
+
+.star-4{
+  grid-area: star4;
+}
+
+
+.weird {
+  height: 20px;
+}
+

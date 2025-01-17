@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>WorldSkills</title>
+    <link rel="shortcut icon" href="img/logo.svg" type="image/x-icon" />
+    <link rel="stylesheet" href="styles.css" />
+
+	<!-- JS-->
+    <script src="js/countdown.js"></script>
+	<script src="js/dialoge.js"></script>
+	<script src="js/year.js"></script>
+
+</head>
+  <body>
+    <!-- Header -->
+
+    <nav>
+      <div class="img-container">
+        <img src="img/logo-international.svg" alt="Logo International" />
+      </div>
+      <div class="empty"></div>
+      <!-- Bodge so that the content appears at the end-->
+      <a class="right" href="#news">NEWSLETTER</a>
+      <a class="right" href="#tickets">TICKETS</a>
+      <a class="right" href="#register">REGISTER</a>
+    </nav>
+
+    <!-- Hero-->
+
+    <section class="Hero">
+      <h1>WorldSkills Shanghai 2026</h1>
+      <h4>September 22-27, 2026</h4>
+      <p>Join us for the world's largest international skills copmetition.</p>
+      <a href="#" class="btn btn-primary"> Learn More </a>
+    </section>
+
+    <!-- About -->
+
+    <section class="About">
+      <div class="left">
+        <img src="img/icon.png" alt="Icon" />
+        <div class="text-about">
+          <h3>What is WorldSkills?</h3>
+          <p>
+            The WorldSkills Competition is the world's biggest international
+            skills competition, bringing together young people, industry,
+            education and government leaders from around the world to advance
+            Technical and Vocational Education and Training.
+            <br />
+            <br />
+            The 48th edition will be held in Shanghai, China from September 22nd
+            to September 27th, 2026. Long known as the “Pearl of the Orient”,
+            Shanghai combines a rich history with a modern and fashionable
+            international metropolis. This amazing city has already developed a
+            VET system with businesses as the major players, public vocational
+            institutions as the basis, and private training institutions as the
+            supplement.
+          </p>
+        </div>
+      </div>
+      <div class="image-container">
+        <img src="img/about.jpg" alt="Image of Shanghai" />
+      </div>
+    </section>
+
+    <!-- Countdown -->
+    <section class="countdown-section">
+      <h2>Countdown to the Opening Ceremony</h2>
+      <div class="timer-grid">
+        <div class="time days">
+          <div class="remaining remaining-days">00</div>
+          <div class="time-decoreation">DAYS</div>
+        </div>
+        <div class="time days">
+          <div class="remaining remaining-hours">00</div>
+          <div class="time-decoreation">HOURS</div>
+        </div>
+        <div class="time days">
+          <div class="remaining remaining-minutes">00</div>
+          <div class="time-decoreation">MINUTES</div>
+        </div>
+        <div class="time days">
+          <div class="remaining remaining-seconds">00</div>
+          <div class="time-decoreation">SECONDS</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Newsletter-->
+    <section class="newsletter" id="news">
+      <img
+        class="original-size newsletter-icon"
+        src="img/icon.png"
+        alt="icon"
+      />
+      <h3 class="newsletter-title">Stay Updated</h3>
+      <p class="newsletter-texxt">
+        Subscribe to our newsletter for the latest news and updates in the lead
+        up to the big event.
+      </p>
+      <div class="newsletter-form">
+        <form action="/" method="GET">
+          <!-- NOTE: Make Post when backend is implemented-->
+          <input
+            type="email"
+            name="email"
+            id="email"
+            placeholder="Enter your email"
+          />
+          <input class="btn btn-primary" type="button" value="SUBSCRIBE" />
+        </form>
+      </div>
+    </section>
+
+    <!-- Tickets -->
+    <section class="tickets" id="tickets">
+      <h2>Get Your Tickets</h2>
+
+      <!-- Cards -->
+      <!-- NOTE: Image 5 for the first card and 6 for the second-->
+      <div class="cards">
+        <article class="card card-1">
+          <img
+            class="card-image"
+            src="img/img-5.jpg"
+            alt="Image of WorldSkills"
+          />
+          <h4>Opening Ceremony</h4>
+          <p>Be part of the grand opening of WorldSkills Shanghai 2026.</p>
+          <a class="btn btn-primary card-btn" href="/"> BOOK NOW </a>
+        </article>
+
+        <article class="card card-2">
+          <img
+            class="card-image"
+            src="img/img-6.jpg"
+            alt="Image of WorldSkills"
+          />
+          <h4>Closing Ceremony</h4>
+          <p>
+            Join us for one final celebration of our competitors' achievements.
+          </p>
+
+          <p>
+            <a class="btn btn-primary card-btn" href="/"> BOOK NOW </a>
+          </p>
+        </article>
+      </div>
+    </section>
+
+    <!-- Register -->
+    <section class="register" id="register">
+      <img class="original-size register-icon" src="img/icon.png" alt="Icon" />
+      <h3>Register as a Visitor</h3>
+      <p>Secure your spot to witness skills excellence in-person.</p>
+      <button id="showDialog" class="btn btn-primary">REGISTER NOW</button>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+      <div class="top">
+        <div class="logos">
+          <img class="icon" src="img/ws-logo.png" alt="WorldSkills logo" /><img
+            src="img/wscn-logo.png"
+            alt="WorldSkills Logo"
+            class="icon"
+          /><img class="icon" src="img/wsuk-logo.png" alt="World Skills Logo" />
+        </div>
+        <div class="links links-right">
+          <a href="#newsletter">Newsletter</a><a href="#tickets">Tickets</a
+          ><a href="#register">register</a>
+        </div>
+      </div>
+
+      <div class="bottom">
+        <p class="year">© 2024 WorldSkills. All rights reserved.</p>
+      </div>
+    </footer>
+
+    <!-- The modal for registering -->
+    <dialog>
+      <button class="close">Close Modal</button>
+      <form>
+        <input
+          type="text"
+          name="name"
+          id="name"
+          placeholder="Please enter your full nanme"
+        />
+        <input type="date" name="Birthdate" id="birthdate" />
+        <select name="date" id="date">
+          <option value="22">Tuesday 22nd September 2026</option>
+          <option value="23">Wednesday 23nd September 2026</option>
+          <!-- This is how the date is given in the booklet-->
+          <option value="24">Thursday 24nd September 2026</option>
+          <option value="25">Friday 25nd September 2026</option>
+        </select>
+        <input type="button" value="Submit" />
+      </form>
+    </dialog>
+  </body>
+</html>

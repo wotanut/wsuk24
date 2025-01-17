@@ -1,0 +1,287 @@
+@font-face {
+  font-family: "OpenSans";
+  src: url(fonts/OpenSans-VariableFont_wdthwght.ttf);
+}
+
+/*Root Styling*/
+:root {
+  /* Colours */
+  --color-black: #000000; /*Black */
+  --color-blue: #012169; /*Blue */
+  --color-brown: #81162a; /*Brown */
+  --color-dark: #330009; /*Dark */
+  --color-gray: #898989; /*Grey*/
+  --color-orange: #ffb71c; /*Orange */
+  --color-red: #c8102e; /*Red */
+  --color-white: #ffffff; /*White */
+
+  /* Font */
+  font-family: "OpenSans";
+}
+
+/** CSS Resets **/
+
+body,
+html {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/** Header Styling **/
+
+h1 {
+  color: var(--color-white);
+  font-weight: bold;
+  font-size: xx-large;
+	text-wrap: wrap;
+}
+
+nav,
+footer {
+  background-color: var(--color-red);
+  color: var(--color-white);
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  /** Increase the padding left and right **/
+  padding-left: 5%;
+  padding-right: 5%;
+  gap: 20px;
+}
+
+/* See the markup */
+.empty {
+	flex-grow: 1;
+}
+
+/* Hero */
+
+.Hero {
+  background-image: url("img/img-1.jpg");
+  background-position: 50vh 50vw; /** Body to centre the image **/
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: var(--color-white);
+  justify-content: center;
+}
+
+/* About */
+
+.About {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+}
+
+.About > .Left {
+  display: flex;
+}
+
+/* Countdown generated pattern */
+.countdown-section {
+  background: #012169;
+  background-image: linear-gradient(
+      30deg,
+      #012a80 12%,
+      transparent 12.5%,
+      transparent 87%,
+      #012a80 87.5%,
+      #012a80
+    ),
+    linear-gradient(
+      150deg,
+      #012a80 12%,
+      transparent 12.5%,
+      transparent 87%,
+      #012a80 87.5%,
+      #012a80
+    ),
+    linear-gradient(
+      30deg,
+      #0e3a66 12%,
+      transparent 12.5%,
+      transparent 87%,
+      #0e3a66 87.5%,
+      #0e3a66
+    ),
+    linear-gradient(
+      150deg,
+      #0e3a66 12%,
+      transparent 12.5%,
+      transparent 87%,
+      #0e3a66 87.5%,
+      #0e3a66
+    ),
+    linear-gradient(
+      60deg,
+      #1a4974 25%,
+      transparent 25.5%,
+      transparent 75%,
+      #1a4974 75%,
+      #1a4974
+    ),
+    linear-gradient(
+      60deg,
+      #1a4974 25%,
+      transparent 25.5%,
+      transparent 75%,
+      #1a4974 75%,
+      #1a4974
+    );
+  background-position: 0 0, 0 0, 26px 46px, 26px 46px, 0 0, 26px 46px;
+  background-size: 52px 91px;
+  color: white;
+  padding: var(--gap-m) 0;
+  text-align: center;
+}
+
+.countdown-section > .timer-grid {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+
+  .time {
+    background-color: var(--color-blue);
+    padding: 10px;
+  }
+}
+
+.countdown-section > h2 {
+  color: var(--color-white);
+  background-color: var(--color-blue);
+  padding: 10px;
+}
+
+.original-size {
+  height: min-content;
+  width: min-content;
+}
+
+/* Newsletter  */
+
+.newsletter {
+  display: grid;
+  grid-template-areas: "icon title" "icon text" "icon email";
+  justify-content: center;
+  padding: 10px;
+}
+
+.newsletter-icon {
+  grid-area: icon;
+  justify-self: right;
+}
+
+/* Register */
+
+.register {
+  display: grid;
+  grid-template-areas: "icon title" "icon text" "icon button";
+  justify-content: center;
+  padding: 10px;
+}
+
+.register-icon {
+  grid-area: icon;
+  justify-self: right;
+}
+
+/* Tickets  */
+
+.tickets {
+  display: grid;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background-image: url(img/parallax-bg.jpg);
+}
+
+.tickets > h2 {
+  color: var(--color-orange);
+  background-color: var(--color-black);
+  padding: 5px;
+}
+
+/* Cards  */
+
+.cards {
+  display: grid;
+  grid-template-areas: "card-1 card-2";
+  gap: 20px;
+  justify-content: center;
+  width: 750px;
+}
+
+.card {
+  background: var(--color-white);
+  display: grid;
+  padding: 10px;
+}
+
+.card > h4 {
+  justify-self: left;
+  color: var(--color-brown);
+  font-size: large;
+}
+
+.card-image {
+  width: 50%;
+  height: 50%;
+}
+
+.icon {
+  width: 100px;
+  height: 100px;
+  /* background: var(--color-white); */
+}
+
+.btn {
+  color: var(--color-dark);
+  border: solid 1px var(--color-red);
+  padding: 5px;
+  background-color: var(--color-white);
+}
+
+footer {
+  display: grid;
+  color: var(--color-white);
+  align-items: center;
+  justify-content: center;
+  background-color: var(--color-brown);
+  text-align: center;
+}
+
+footer > .top {
+  display: flex;
+  gap: 100px;
+}
+
+footer > .top > .links {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Nicities  */
+
+.remaining {
+  font-weight: bold;
+  font-size: xx-large;
+}
+
+.time-decoreation {
+  font-size: x-small;
+  font-weight: 200;
+}
